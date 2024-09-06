@@ -10,19 +10,6 @@ const App = () => {
         setNovaTarefa('');
     };
 
-    const inputCheckBox = (id) => {
-      setTarefas(tarefas.map(tarefa => {
-        if (tarefa.id === id) {
-          return {
-            id: tarefa.id,
-            descricao: tarefa.descricao,
-            isChecked: !tarefa.isChecked
-          };
-        }
-        return tarefa;
-      }));
-    };
-
     const inputTarefa = (event) => {
         setNovaTarefa(event.target.value);
     };
@@ -51,8 +38,6 @@ const App = () => {
               <li key={tarefa.id} className="task-item">
                 <input
                   type="checkbox"
-                  checked={tarefa.isChecked}
-                  onChange={() => inputCheckBox(tarefa.id)}
                 />
                 {tarefa.descricao}
                 <button
