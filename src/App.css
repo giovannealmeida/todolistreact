@@ -67,3 +67,7 @@ input[type="checkbox"] {
 .delete-button:hover {
   background-color: #f5c6cb;
 }
+
+.task-completed > span {
+  text-decoration: line-through;
+}
